@@ -46,16 +46,12 @@ bool FIFOQueueClass::dequeue(int &outItem) {
 void FIFOQueueClass::print() const {
 
   LinkedNodeClass* temp = head;
-  cout << "begin to print" << endl;
 
   while (temp != NULL) {
     cout << temp -> getValue() << " ";
     temp = temp -> getNext();
-    cout << "test" << endl;
   }
   cout << endl;
-
-  cout << "end printing" << endl;
 }
 
 int FIFOQueueClass::getNumElems() const {

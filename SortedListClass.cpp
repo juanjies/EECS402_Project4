@@ -62,7 +62,7 @@ void SortedListClass::clear() {
     ;
   }
   else {
-    for (int i = 0; i < this -> getNumElems(); i++) {
+    for (int i = 0; i < (this -> getNumElems()); i++) {
       temp = temp -> getNext();
       delete head;
       head = temp;
@@ -171,8 +171,9 @@ int SortedListClass::getNumElems() const {
   LinkedNodeClass* temp = head;
   int numElems = 0;
   
-  while (temp != 0) {
+  while (temp != NULL) {
     numElems++;
+    temp = temp -> getNext();
   }
   return (numElems);
 }
