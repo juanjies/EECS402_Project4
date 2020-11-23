@@ -23,8 +23,8 @@ int main()
   
   testList.printForward();
   testList.insertValue(42);
-  testList.printForward();
-  
+  // testList.printForward();
+  testList.getNumElems();
   return 0;
 }
 
