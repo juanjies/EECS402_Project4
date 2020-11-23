@@ -36,10 +36,10 @@ int main()
   testQueue.enqueue(1);
   testQueue.enqueue(3);
   testQueue.enqueue(5);
-  testQueue.getNumElems();
+  cout << "Number of Elements: " << testQueue.getNumElems();
   testQueue.print();
   testQueue.dequeue(outItem);
-  testQueue.getNumElems();
+  cout << "Number of Elements: " << testQueue.getNumElems();
   testQueue.print();
   testQueue.clear();
   testQueue.print();
