@@ -77,7 +77,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
   
   if (temp != NULL) {
     tempVal = temp -> getValue();
-    while (valToInsert >= tempVal) {
+    while (valToInsert >= tempVal || temp != NULL) {
       temp = temp -> getNext(); 
       tempVal = temp -> getValue();
     }
