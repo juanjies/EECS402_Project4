@@ -82,8 +82,8 @@ void SortedListClass::insertValue(const int &valToInsert) {
       tempVal = temp -> getValue();
     }
     insertedNode = new LinkedNodeClass(temp -> getPrev(),
-                                     valToInsert,
-                                     temp);
+                                       valToInsert,
+                                       temp);
     insertedNode -> setBeforeAndAfterPointers();
     insertedNode = NULL;
   }
