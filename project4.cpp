@@ -30,11 +30,14 @@ int main()
   */
   int outItem = 0;
   FIFOQueueClass testQueue;
+  cout << "Queue testing: " << endl;
 
   testQueue.print();
   testQueue.enqueue(1);
   testQueue.enqueue(3);
   testQueue.enqueue(5);
+  testQueue.print();
+  testQueue.dequeue(outItem);
   testQueue.print();
   return 0;
 }
