@@ -21,7 +21,7 @@ SortedListClass::SortedListClass(const SortedListClass &rhs) {
   LinkedNodeClass* tempTwoPrev = NULL;
   LinkedNodeClass* tempTwoNext = NULL;
 
-  if (rhs.head != NULL || rhs.tail != NULL) {
+  if (rhs.head != NULL && rhs.tail != NULL) {
     for (int i = 0; i < rhs.getNumElems(); i++) {
       if (i == 0) {
         tempTwoPrev = new LinkedNodeClass(NULL,
@@ -45,7 +45,7 @@ SortedListClass::SortedListClass(const SortedListClass &rhs) {
     } 
   }
 
-  else if (rhs.head == NULL || rhs.tail == NULL) {
+  else if (rhs.head == NULL && rhs.tail == NULL) {
     head = NULL;
     tail = NULL;
   }
@@ -58,7 +58,7 @@ SortedListClass::~SortedListClass() {
 void SortedListClass::clear() {
   LinkedNodeClass* temp = head;
 
-  if (head == NULL || tail == NULL) {
+  if (head == NULL && tail == NULL) {
     ;
   }
   else {
@@ -77,7 +77,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
   
   if (temp != NULL) {
     tempVal = temp -> getValue();
-    while (valToInsert >= tempVal || temp != tail) {
+    while (valToInsert >= tempVal && temp != tail) {
       if (temp == NULL) {
         temp = tail;
       }
