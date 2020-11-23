@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include "LinkedNodeClass.h"
 
+using namespace std;
 // Programmer: Juan-Jie Sun
 // Date: November 2020
 // Purpose: This class will be used to store individual nodes of 

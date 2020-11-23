@@ -1,7 +1,6 @@
 #include <iostream>
 #include "SortedListClass.h"
 
-
 using namespace std;
 
 //Do NOT remove any of the preprocessor directives in this file.

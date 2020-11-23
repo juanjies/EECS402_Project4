@@ -16,15 +16,31 @@ SortedListClass::SortedListClass() {
 }
 
 SortedListClass::SortedListClass(const SortedListClass &rhs) {  
-
-  LinkedNodeClass* temp = rhs.head;
+  // copy ctor for deep copy
+  LinkedNodeClass* tempOne = rhs.head;
+  LinkedNodeClass* tempTwoPrev = NULL, tempTwoNext = NULL;
 
   if (rhs.head != NULL || rhs.tail != NULL) {
     for (int i = 0; i < rhs.getNumElems(); i++) {
-      head = new LinkedNodeClass(temp -> getPrev(), 
-        temp -> getValue(), 
-        temp -> getNext() );
-      temp = temp -> getNext();
+      if (i == 0) {
+        tempTwoPrev = new LinkedNodeClass(NULL,
+                                          tempOne -> getValue(), NULL);
+        head = tempTwoPrev;
+        tempOne = tempOne -> getNext();
+      }
+      else if (i == (rhs.getNumElems() - 1)) {
+        tempTwoNext = new LinkedNodeClass(tempTwoPrev,
+                                          tempOne -> getValue(), NULL);
+        tempTwoNext -> setBeforeAndAfterPointers();
+        tail = tempTwoNext;
+      }
+      else {
+        tempTwoNext = new LinkedNodeClass(tempTwoPrev,
+                                          tempOne -> getValue(), NULL);
+        tempTwoNext -> setBeforeAndAfterPointers();
+        tempOne = tempOne -> getNext();
+        tempTwoPrev = tempTwoNext;
+      }
     } 
   }
 
@@ -58,13 +74,13 @@ void SortedListClass::insertValue(const int &valToInsert) {
 
   int tempVal = temp -> getValue();
 
-  while (tempVal <= valToInsert) {
+  while (valToInsert <= tempVal) {
     temp = temp -> getNext(); 
     tempVal = temp -> getValue();
   }
-  insertNode = new LinkedNodeClass(temp,
+  insertNode = new LinkedNodeClass(temp -> getPrev(),
                                    valToInsert,
-                                   temp -> getNext());
+                                   temp);
   insertNode -> setBeforeAndAfterPointers();
 }
 
