@@ -42,3 +42,5 @@ class FIFOQueueClass {
     //memory leaks.
     void clear();
 };
+
+#endif
