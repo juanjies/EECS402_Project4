@@ -34,8 +34,9 @@ int main()
   
   // deep copy from listOne to list Two
   SortedListClass listTwo(listOne); 
-  listTwo.removeFront();
-  listTwo.removeLast();
+  int theVal = 0;
+  listTwo.removeFront(theVal);
+  listTwo.removeLast(theVal);
   listTwo.insertValue(6);
   listTwo.insertValue(8);
 
