@@ -37,7 +37,7 @@ bool FIFOQueueClass::dequeue(int &outItem) {
   else {
     outItem = head -> getValue();
     head = head -> getNext();
-    return (ture);
+    return (true);
   }
 }
 
@@ -61,7 +61,7 @@ int FIFOQueueClass::getNumElems() const {
   return (numCount);
 }
 
-int FIFOQueueClass::clear() {
+void FIFOQueueClass::clear() {
   LinkedNodeClass* temp = head;
   while (temp != NULL) {
     head = head -> getNext();
