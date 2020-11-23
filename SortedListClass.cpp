@@ -101,15 +101,15 @@ void SortedListClass::printForward() const {
   if (temp == NULL) {
     cout << "List is Empty" << endl;
   }
-  else {
+  // else {
     //while (temp != NULL) {
     //  cout << "  " << (temp -> getValue()) << endl;
 //      cout << "next pointer is pointing to " 
 //           << temp -> getNext() << endl;
 //      temp = temp -> getNext();
     //}
-    cout << "End of List Contents";
-  }
+  //  cout << "End of List Contents" << endl;
+  // }
 }
 
 void SortedListClass::printBackward() const {
