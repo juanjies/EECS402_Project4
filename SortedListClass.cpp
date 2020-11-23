@@ -92,6 +92,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
     insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
     head = insertNode;
     tail = insertNode;
+    insertNode = NULL;
   // }
 }
 

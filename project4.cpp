@@ -21,13 +21,14 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
-  /*
-  SortedListClass testList;
   
+  SortedListClass testList;
+  cout << "Sorted List testing: " << endl;
+
   testList.printForward();
   testList.insertValue(42);
   testList.printForward();
-  */
+  
   int outItem = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;
@@ -36,12 +37,13 @@ int main()
   testQueue.enqueue(1);
   testQueue.enqueue(3);
   testQueue.enqueue(5);
-  cout << "Number of Elements: " << testQueue.getNumElems();
+  cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.dequeue(outItem);
-  cout << "Number of Elements: " << testQueue.getNumElems();
+  cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.clear();
+  cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
 
   return 0;
