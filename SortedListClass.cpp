@@ -94,7 +94,6 @@ void SortedListClass::insertValue(const int &valToInsert) {
         insertedNode -> setBeforeAndAfterPointers();
         insertedNode = NULL;
       }
-    }
   }
 
   else if (temp == NULL) {
