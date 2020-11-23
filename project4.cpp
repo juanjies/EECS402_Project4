@@ -29,7 +29,6 @@ int main()
   testList.insertValue(1);
   testList.insertValue(3);
   testList.insertValue(5);
-  testList.insertValue(2);
   testList.printForward();
   
   int outItem = 0;
