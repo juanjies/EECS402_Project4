@@ -48,6 +48,7 @@ void FIFOQueueClass::print() const {
   while (temp != NULL) {
     cout << temp -> getValue() << " ";
     temp = temp -> getNext();
+    cout << "test" << endl;
   }
   cout << endl;
 }
