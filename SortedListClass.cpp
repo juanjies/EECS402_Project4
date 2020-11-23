@@ -101,7 +101,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
       insertedNode = NULL;
     }
     // if valToInsert is less than all on the list
-    else if (valToInsert < tempVal && temp = head) {
+    else if (valToInsert < tempVal && temp == head) {
       insertedNode = new LinkedNodeClass(NULL, valToInsert, temp);
       insertedNode -> setBeforeAndAfterPointers();
       head = insertedNode;
