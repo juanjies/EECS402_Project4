@@ -20,12 +20,13 @@ void FIFOQueueClass::enqueue(const int &newItem) {
   LinkedNodeClass* insertNode = NULL;
 
   if (head == NULL) {
-    head = new LinkedNodeClass(NULL, newItem, NULL);
-    tail = head;
+    tail = new LinkedNodeClass(NULL, newItem, NULL);
+    head = tail;
   }
   else {
-    insertNode = new LinkedNodeClass(NULL, newItem, head -> getNext());
-    head = insertNode;
+    insertNode = new LinkedNodeClass(tail, newItem, NULL);
+    tail = insertNode;
+    tail -> setBeforeAndAfterPointers();
     insertNode = NULL;
   }
 }
