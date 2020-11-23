@@ -71,7 +71,7 @@ void SortedListClass::clear() {
 
 void SortedListClass::insertValue(const int &valToInsert) {
   LinkedNodeClass* temp = head;
-  LinkedNodeClass* insertNode = NULL;
+  LinkedNodeClass* insertedNode = NULL;
 
   int tempVal = 0;
   
@@ -81,18 +81,18 @@ void SortedListClass::insertValue(const int &valToInsert) {
       temp = temp -> getNext(); 
       tempVal = temp -> getValue();
     }
-    insertNode = new LinkedNodeClass(temp -> getPrev(),
+    insertedNode = new LinkedNodeClass(temp -> getPrev(),
                                      valToInsert,
                                      temp);
-    insertNode -> setBeforeAndAfterPointers();
-    insertValue = NULL;
+    insertedNode -> setBeforeAndAfterPointers();
+    insertedNode = NULL;
   }
 
   else if (temp == NULL) {
-    insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
-    head = insertNode;
-    tail = insertNode;
-    insertNode = NULL;
+    insertedNode = new LinkedNodeClass(NULL, valToInsert, NULL);
+    head = insertedNode;
+    tail = insertedNode;
+    insertedNode = NULL;
   }
 }
 
