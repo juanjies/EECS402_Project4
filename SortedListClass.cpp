@@ -90,6 +90,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
     insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
     head = insertNode;
     tail = insertNode;
+    temp = insertNode;
   }
 }
 
@@ -101,10 +102,10 @@ void SortedListClass::printForward() const {
     cout << "List is Empty" << endl;
   }
   else {
-    while (temp != 0) {
+    while (temp != NULL) {
       cout << "  " << temp -> getValue() << endl;
-      cout << "next pointer is pointing to " 
-           << temp -> getNext() << endl;
+//      cout << "next pointer is pointing to " 
+//           << temp -> getNext() << endl;
       temp = temp -> getNext();
     }
     cout << "End of List Contents";
