@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "LinkedNodeClass.h"
 
 // Programmer: Juan-Jie Sun
