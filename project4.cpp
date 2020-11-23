@@ -22,7 +22,7 @@ int main()
   SortedListClass testList;
   
   testList.printForward();
-  // testList.insertValue(42);
+  testList.insertValue(42);
   testList.printForward();
   // testList.getNumElems();
   return 0;
