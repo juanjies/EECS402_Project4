@@ -18,36 +18,42 @@ SortedListClass::SortedListClass() {
 SortedListClass::SortedListClass(const SortedListClass &rhs) {  
   // copy ctor for deep copy
   LinkedNodeClass* tempOne = rhs.head;
-  LinkedNodeClass* tempTwoPrev = NULL;
+  LinkedNodeClass* tempTwoPrev = head;
   LinkedNodeClass* tempTwoNext = NULL;
 
-  if (rhs.head != NULL && rhs.tail != NULL) {
+  // if the list is empty
+  if (rhs.head == NULL && rhs.tail == NULL) {
+    head = NULL;
+    tail = NULL;
+  }
+
+  else if (rhs.head != NULL && rhs.tail != NULL) {
     for (int i = 0; i < rhs.getNumElems(); i++) {
+      // copy the first node
       if (i == 0) {
-        tempTwoPrev = new LinkedNodeClass(NULL,
+        tempTwoNext = new LinkedNodeClass(NULL, 
                                           tempOne -> getValue(), NULL);
+        tempTwoPrev = tempTwoNext;
         head = tempTwoPrev;
         tempOne = tempOne -> getNext();
       }
+      // copy the last node
       else if (i == (rhs.getNumElems() - 1)) {
         tempTwoNext = new LinkedNodeClass(tempTwoPrev,
                                           tempOne -> getValue(), NULL);
-        tempTwoNext -> setBeforeAndAfterPointers();
+        tempTwoPrev = tempTwoNext;
+        tempTwoPrev -> setBeforeAndAfterPointers();
         tail = tempTwoNext;
       }
+      // copy other nodes in the middle
       else {
         tempTwoNext = new LinkedNodeClass(tempTwoPrev,
                                           tempOne -> getValue(), NULL);
-        tempTwoNext -> setBeforeAndAfterPointers();
-        tempOne = tempOne -> getNext();
         tempTwoPrev = tempTwoNext;
+        tempTwoPrev -> setBeforeAndAfterPointers();
+        tempOne = tempOne -> getNext();
       }
     } 
-  }
-
-  else if (rhs.head == NULL && rhs.tail == NULL) {
-    head = NULL;
-    tail = NULL;
   }
 }
 
@@ -57,7 +63,6 @@ SortedListClass::~SortedListClass() {
 
 void SortedListClass::clear() {
   LinkedNodeClass* temp = head;
-
   if (head == NULL && tail == NULL) {
     ;
   }
@@ -87,12 +92,11 @@ void SortedListClass::insertValue(const int &valToInsert) {
   // the list is NOT empty
   else if (temp != NULL) {
     tempVal = temp -> getValue();
-
+    // find the right location to insert
     while (valToInsert >= tempVal && temp != tail) {
         temp = temp -> getNext(); 
         tempVal = temp -> getValue();
     }
-    
     // if valToInsert is greater than all on the list
     if (valToInsert >= tempVal && temp == tail) {
       insertedNode = new LinkedNodeClass(temp, valToInsert, NULL);

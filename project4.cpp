@@ -22,16 +22,27 @@ int main()
   //a sample output, etc.
 
   
-  SortedListClass testList;
+  SortedListClass listOne;
   cout << "Sorted List testing: " << endl;
 
-  testList.printForward();
-  testList.insertValue(5);
-  testList.insertValue(7);
-  testList.insertValue(9);
-  testList.insertValue(2);
+  listOne.printForward();
+  listOne.insertValue(3);
+  listOne.insertValue(5);
+  listOne.insertValue(7);
+  listOne.insertValue(1);
+  listOne.insertValue(9);
   
-  testList.printForward();
+  // deep copy from listOne to list Two
+  SortedListClass listTwo(listOne); 
+  listTwo.removeFront();
+  listTwo.removeLast();
+  listTwo.insertValue(6);
+  listTwo.insertValue(8);
+
+  cout << "List one is: ";
+  listOne.printForward();
+  cout << "List two is: ";
+  listTwo.printForward();
   
   int outItem = 0;
   FIFOQueueClass testQueue;
