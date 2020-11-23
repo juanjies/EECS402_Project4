@@ -101,6 +101,9 @@ void SortedListClass::printForward() const {
   if (temp == NULL) {
     cout << "List is Empty" << endl;
   }
+  else {
+    ; 
+  }
   // else {
     //while (temp != NULL) {
     //  cout << "  " << (temp -> getValue()) << endl;
