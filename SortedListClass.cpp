@@ -76,37 +76,45 @@ void SortedListClass::insertValue(const int &valToInsert) {
   LinkedNodeClass* insertedNode = NULL;
 
   int tempVal = 0;
-  
-  if (temp != NULL) {
-      tempVal = temp -> getValue();
-
-      while (valToInsert >= tempVal && temp != tail) {
-          temp = temp -> getNext(); 
-          tempVal = temp -> getValue();
-      }
-      if (temp != tail) {
-        insertedNode = new LinkedNodeClass(temp -> getPrev(),
-                                      valToInsert,
-                                      temp);
-        insertedNode -> setBeforeAndAfterPointers();
-        insertedNode = NULL;
-      }
-      
-      // if valToInsert is greater than all on the list
-      if (valToInsert >= tempVal && temp == tail) {
-        insertedNode = new LinkedNodeClass(temp, valToInsert, NULL);
-        insertedNode -> setBeforeAndAfterPointers();
-        tail = insertedNode;
-        insertedNode = NULL;
-      }
-  }
-
-  else if (temp == NULL) {
+  // if the list is empty
+  if (temp == NULL) {
     insertedNode = new LinkedNodeClass(NULL, valToInsert, NULL);
     head = insertedNode;
     tail = insertedNode;
     temp = head;
     insertedNode = NULL;
+  }
+  // the list is NOT empty
+  else if (temp != NULL) {
+    tempVal = temp -> getValue();
+
+    while (valToInsert >= tempVal && temp != tail) {
+        temp = temp -> getNext(); 
+        tempVal = temp -> getValue();
+    }
+    
+    // if valToInsert is greater than all on the list
+    if (valToInsert >= tempVal && temp == tail) {
+      insertedNode = new LinkedNodeClass(temp, valToInsert, NULL);
+      insertedNode -> setBeforeAndAfterPointers();
+      tail = insertedNode;
+      insertedNode = NULL;
+    }
+    // if valToInsert is less than all on the list
+    else if (valToInsert < tempVal && temp = head) {
+      insertedNode = new LinkedNodeClass(NULL, valToInsert, temp);
+      insertedNode -> setBeforeAndAfterPointers();
+      head = insertedNode;
+      insertedNode = NULL;
+    }
+    // any others in the middle of the list
+    else {
+      insertedNode = new LinkedNodeClass(temp -> getPrev(),
+                                    valToInsert,
+                                    temp);
+      insertedNode -> setBeforeAndAfterPointers();
+      insertedNode = NULL;
+    }
   }
 }
 
