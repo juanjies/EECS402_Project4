@@ -76,5 +76,6 @@ void FIFOQueueClass::clear() {
     delete temp;
     temp = head;
   }
+  tail = NULL;
 }
 

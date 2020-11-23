@@ -62,10 +62,12 @@ void SortedListClass::clear() {
     ;
   }
   else {
-    for (int i = 0; i < this -> getNumElems(); i++)
-    temp = temp -> getNext();
-    delete head;
-    head = temp;
+    for (int i = 0; i < this -> getNumElems(); i++) {
+      temp = temp -> getNext();
+      delete head;
+      head = temp;
+    }
+    tail = NULL;
   }
 }
 
@@ -86,6 +88,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
         tempVal = temp -> getValue();
       }
     }
+
     insertedNode = new LinkedNodeClass(temp -> getPrev(),
                                        valToInsert,
                                        temp);
