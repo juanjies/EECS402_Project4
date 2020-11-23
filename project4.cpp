@@ -26,8 +26,8 @@ int main()
   cout << "Sorted List testing: " << endl;
 
   testList.printForward();
-  testList.insertValue(3);
   testList.insertValue(1);
+  testList.insertValue(3);
   testList.printForward();
   
   int outItem = 0;
