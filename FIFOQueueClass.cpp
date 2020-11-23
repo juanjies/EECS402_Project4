@@ -19,7 +19,7 @@ FIFOQueueClass::~FIFOQueueClass() {
 void FIFOQueueClass::enqueue(const int &newItem) {
   LinkedNodeClass* insertNode = NULL;
 
-  if (head = NULL) {
+  if (head == NULL) {
     head = new LinkedNodeClass(NULL, newItem, NULL);
     tail = head;
   }
@@ -37,6 +37,7 @@ bool FIFOQueueClass::dequeue(int &outItem) {
   else {
     outItem = head -> getValue();
     head = head -> getNext();
+    delete head -> getPrev();
     return (true);
   }
 }
