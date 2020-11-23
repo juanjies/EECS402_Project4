@@ -73,7 +73,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
   LinkedNodeClass* temp = head;
   LinkedNodeClass* insertNode = NULL;
 
-  int tempVal = 0;
+  // int tempVal = 0;
   /*
   if (temp != NULL) {
     tempVal = temp -> getValue();
@@ -92,7 +92,6 @@ void SortedListClass::insertValue(const int &valToInsert) {
     insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
     head = insertNode;
     tail = insertNode;
-    temp = insertNode;
   // }
 }
 

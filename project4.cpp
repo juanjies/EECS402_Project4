@@ -1,5 +1,6 @@
 #include <iostream>
 #include "SortedListClass.h"
+#include "FIFOQueueClass.h"
 
 using namespace std;
 
@@ -19,12 +20,22 @@ int main()
   //submit, but we will not be running your main function, so the
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
+
+  /*
   SortedListClass testList;
   
   testList.printForward();
   testList.insertValue(42);
   testList.printForward();
-  // testList.getNumElems();
+  */
+  FIFOQueueClass testQueue;
+
+  testQueue.print();
+  testQueue.enqueue(1);
+  testQueue.enqueue(3);
+  testQueue.print();
+  testQueue.dequeue();
+  testQueue.print();
   return 0;
 }
 
