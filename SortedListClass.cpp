@@ -18,7 +18,8 @@ SortedListClass::SortedListClass() {
 SortedListClass::SortedListClass(const SortedListClass &rhs) {  
   // copy ctor for deep copy
   LinkedNodeClass* tempOne = rhs.head;
-  LinkedNodeClass* tempTwoPrev = NULL, tempTwoNext = NULL;
+  LinkedNodeClass* tempTwoPrev = NULL;
+  LinkedNodeClass* tempTwoNext = NULL;
 
   if (rhs.head != NULL || rhs.tail != NULL) {
     for (int i = 0; i < rhs.getNumElems(); i++) {
