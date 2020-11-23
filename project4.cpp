@@ -46,6 +46,7 @@ int main()
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
+  cout << "Finish testing queue!" << endl;
 
   return 0;
 }
