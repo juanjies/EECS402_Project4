@@ -26,7 +26,9 @@ int main()
   cout << "Sorted List testing: " << endl;
 
   testList.printForward();
-  testList.insertValue(42);
+  testList.insertValue(1);
+  testList.insertValue(3);
+  testList.insertValue(5);
   testList.printForward();
   
   int outItem = 0;
@@ -34,9 +36,9 @@ int main()
   cout << "Queue testing: " << endl;
 
   testQueue.print();
-  testQueue.enqueue(1);
-  testQueue.enqueue(3);
-  testQueue.enqueue(5);
+  testQueue.enqueue(2);
+  testQueue.enqueue(4);
+  testQueue.enqueue(6);
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.dequeue(outItem);
