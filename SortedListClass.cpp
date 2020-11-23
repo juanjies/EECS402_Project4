@@ -106,7 +106,8 @@ void SortedListClass::printForward() const {
       cout << "  " << temp -> getValue() << endl;
 //      cout << "next pointer is pointing to " 
 //           << temp -> getNext() << endl;
-      temp = temp -> getNext();
+//      temp = temp -> getNext();
+      temp = NULL;
     }
     cout << "End of List Contents";
   }
