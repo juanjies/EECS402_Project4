@@ -74,7 +74,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
   LinkedNodeClass* insertNode = NULL;
 
   int tempVal = 0;
-
+  /*
   if (temp != NULL) {
     tempVal = temp -> getValue();
     while (valToInsert <= tempVal) {
@@ -86,12 +86,14 @@ void SortedListClass::insertValue(const int &valToInsert) {
                                      temp);
     insertNode -> setBeforeAndAfterPointers();
   }
+
   else if (temp == NULL) {
+  */
     insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
     head = insertNode;
     tail = insertNode;
     temp = insertNode;
-  }
+  // }
 }
 
 void SortedListClass::printForward() const {
@@ -100,9 +102,6 @@ void SortedListClass::printForward() const {
   
   if (temp == NULL) {
     cout << "List is Empty" << endl;
-  }
-  else {
-    ; 
   }
   // else {
     //while (temp != NULL) {
