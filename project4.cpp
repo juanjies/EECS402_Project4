@@ -33,9 +33,6 @@ int main()
 
   testQueue.print();
   testQueue.enqueue(1);
-  testQueue.enqueue(3);
-  testQueue.print();
-  testQueue.dequeue(outItem);
   testQueue.print();
   return 0;
 }
