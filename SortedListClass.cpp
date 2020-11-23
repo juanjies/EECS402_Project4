@@ -20,7 +20,7 @@ SortedListClass::SortedListClass(const SortedListClass &rhs) {
   LinkedNodeClass* temp = rhs.head;
 
   if (rhs.head != NULL || rhs.tail != NULL) {
-    for (i = 0; i < rhs.getNumElems(), i++) {
+    for (int i = 0; i < rhs.getNumElems(); i++) {
       head = new LinkedNodeClass(temp -> getPrev(), 
         temp -> getValue(), 
         temp -> getNext() );
@@ -45,7 +45,7 @@ void SortedListClass::clear() {
     ;
   }
   else {
-    for (int i = 0; i < this.getNumElems(); i++)
+    for (int i = 0; i < this -> getNumElems(); i++)
     temp = temp -> getNext();
     delete head;
     head = temp;
