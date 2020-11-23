@@ -103,6 +103,8 @@ void SortedListClass::printForward() const {
   else {
     while (temp != NULL) {
       cout << "  " << temp -> getValue() << endl;
+      cout << "next pointer is pointing to " 
+           << temp -> getNext() << endl;
       temp = temp -> getNext();
     }
     cout << "End of List Contents";
