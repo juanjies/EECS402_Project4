@@ -28,13 +28,14 @@ int main()
   testList.insertValue(42);
   testList.printForward();
   */
+  int outItem = 0;
   FIFOQueueClass testQueue;
 
   testQueue.print();
   testQueue.enqueue(1);
   testQueue.enqueue(3);
   testQueue.print();
-  testQueue.dequeue();
+  testQueue.dequeue(outItem);
   testQueue.print();
   return 0;
 }
