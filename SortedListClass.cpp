@@ -101,7 +101,7 @@ void SortedListClass::printForward() const {
     cout << "List is Empty" << endl;
   }
   else {
-    while (temp != NULL) {
+    while (temp != 0) {
       cout << "  " << temp -> getValue() << endl;
       cout << "next pointer is pointing to " 
            << temp -> getNext() << endl;
