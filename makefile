@@ -17,5 +17,5 @@ proj4.exe: LinkedNodeClass.o SortedListClass.o FIFOQueueClass.o project4.o
       FIFOQueueClass.o -o proj4.exe
 
 clean:
-	rm -rf LinkedNodeClass.o SortedListClass.o project4.o \ 
-     FIFOQueueClass.o proj4.exe
+	rm -rf LinkedNodeClass.o SortedListClass.o project4.o FIFOQueueClass.o \
+			proj4.exe
