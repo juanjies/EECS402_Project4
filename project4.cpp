@@ -33,6 +33,8 @@ int main()
 
   testQueue.print();
   testQueue.enqueue(1);
+  testQueue.enqueue(3);
+  testQueue.enqueue(5);
   testQueue.print();
   return 0;
 }
