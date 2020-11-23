@@ -73,16 +73,24 @@ void SortedListClass::insertValue(const int &valToInsert) {
   LinkedNodeClass* temp = head;
   LinkedNodeClass* insertNode = NULL;
 
-  int tempVal = temp -> getValue();
+  int tempVal = 0;
 
-  while (valToInsert <= tempVal) {
-    temp = temp -> getNext(); 
+  if (temp != NULL) {
     tempVal = temp -> getValue();
+    while (valToInsert <= tempVal) {
+      temp = temp -> getNext(); 
+      tempVal = temp -> getValue();
+    }
+    insertNode = new LinkedNodeClass(temp -> getPrev(),
+                                     valToInsert,
+                                     temp);
+    insertNode -> setBeforeAndAfterPointers();
   }
-  insertNode = new LinkedNodeClass(temp -> getPrev(),
-                                   valToInsert,
-                                   temp);
-  insertNode -> setBeforeAndAfterPointers();
+  else if (temp == NULL) {
+    insertNode = new LinkedNodeClass(NULL, valToInsert, NULL);
+    head = insertNode;
+    tail = insertNode;
+  }
 }
 
 void SortedListClass::printForward() const {
