@@ -50,11 +50,13 @@ int main()
   cout << "the 4th element is: " << theVal << endl; 
   listOne.removeFront(theVal);
   listOne.removeLast(theVal);
-//  listOne.insertValue(4);
-//  listOne.insertValue(6);
+  listOne.insertValue(4);
+  listOne.insertValue(6);
   listOne.printForward();
   listOne.printBackward();
-// listOne.clear();
+  listOne.clear();
+  listOne.printForward();
+
 //  cout << "List two is: ";
 //  listTwo.printForward();
  
