@@ -49,7 +49,7 @@ int main()
   listOne.getElemAtIndex(4, theVal);
   cout << "the 4th element is: " << theVal << endl; 
   listOne.removeFront(theVal);
-  listOne.removeLast(theVal);
+  listOne.removeFront(theVal);
   listOne.insertValue(4);
   listOne.insertValue(6);
   listOne.printForward();
