@@ -41,14 +41,21 @@ int main()
   listTwo.insertValue(6);
   listTwo.insertValue(4);
 */
+  int theVal = 0;
   cout << "List one is: ";
   listOne.printForward();
   listOne.printBackward();
-//  cout << "Num of element: " << listOne.getNumElems() << endl;
+  cout << "Num of element: " << listOne.getNumElems() << endl;
+  listOne.getElemAtIndex(4, theVal);
+  cout << "the 4th element is: " << theVal << endl; 
+  listOne.removeFront(theVal);
+  listOne.removeFront(theVal);
+  listOne.insertValue(4);
+  listOne.insertValue(6);
+  listOne.printforward();
 //  cout << "List two is: ";
 //  listTwo.printForward();
-//  listOne.getElemAtIndex(4, theVal);
-//  cout << "the 4th element is: " << theVal << endl;  
+ 
 
 /*
   int outItem = 0;
