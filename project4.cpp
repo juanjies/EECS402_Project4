@@ -48,7 +48,7 @@ int main()
   listOne.getElemAtIndex(4, tempValOne);
   cout << "the 4th element is: " << tempValOne << endl; 
   listOne.getElemAtIndex(5, tempValTwo);
-  cout << "the 5th element is: " << tempValOne << endl; 
+  cout << "the 5th element is: " << tempValTwo << endl; 
   listOne.removeFront(tempValOne);
   listOne.removeLast(tempValOne);
   listOne.insertValue(4);
