@@ -84,7 +84,7 @@ int main()
 // Stack testing part
 
 int outItemStack = 0;
-FIFOQueueClass testStack;
+LIFOStackClass testStack;
 cout << "Stack testing: " << endl;
 
 testStack.print();
