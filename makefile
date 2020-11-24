@@ -18,8 +18,8 @@ project4.o: project4.cpp SortedListClass.h FIFOQueueClass.h LIFOStackClass.h
 proj4.exe: LinkedNodeClass.o SortedListClass.o FIFOQueueClass.o \ 
            LIFOStackClass.o project4.o
 	g++ LinkedNodeClass.o SortedListClass.o project4.o \
-      FIFOQueueClass.o LIFOStackClass.o -o proj4.exe
+			FIFOQueueClass.o LIFOStackClass.o -o proj4.exe
 
 clean:
 	rm -rf LinkedNodeClass.o SortedListClass.o FIFOQueueClass.o \ 
-     LIFOStackClass.o project4.o proj4.exe
+				 LIFOStackClass.o project4.o proj4.exe
