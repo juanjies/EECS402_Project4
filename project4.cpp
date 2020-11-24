@@ -43,11 +43,11 @@ int main()
   cout << "List one is: ";
   listOne.printForward();
   listOne.printBackward();
-  listOne.getNumElems();
+//cout << "Num of element: " << listOne.getNumElems() << endl;
   cout << "List two is: ";
   listTwo.printForward();
-  listOne.getElemAtIndex(4, theVal);
-  cout << "the 4th element is: " << theVal << endl;  
+//  listOne.getElemAtIndex(4, theVal);
+//  cout << "the 4th element is: " << theVal << endl;  
 
   int outItem = 0;
   FIFOQueueClass testQueue;
