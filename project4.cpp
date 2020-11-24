@@ -53,6 +53,7 @@ int main()
 //  listOne.insertValue(4);
 //  listOne.insertValue(6);
   listOne.printForward();
+  listOne.printBackward();
 // listOne.clear();
 //  cout << "List two is: ";
 //  listTwo.printForward();
