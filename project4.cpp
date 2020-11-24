@@ -54,7 +54,6 @@ int main()
   listOne.insertValue(6);
   listOne.printForward();
   listOne.clear();
-  listOne.printForward();
 //  cout << "List two is: ";
 //  listTwo.printForward();
  
