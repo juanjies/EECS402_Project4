@@ -38,13 +38,13 @@ bool FIFOQueueClass::dequeue(int &outItem) {
   else {
     outItem = head -> getValue();
     head = head -> getNext();
-    delete head -> getPrev();
+    delete (head -> getPrev());
+    head->setPreviousPointerToNull();
     return (true);
   }
 }
 
 void FIFOQueueClass::print() const {
-
   LinkedNodeClass* temp = head;
 
   while (temp != NULL) {
