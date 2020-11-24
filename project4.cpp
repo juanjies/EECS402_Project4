@@ -40,13 +40,14 @@ int main()
   listTwo.insertValue(20);
 
   int tempValOne = 0;
+  int tempValTwo = 0;
   cout << "List one is: ";
   listOne.printForward();
   listOne.printBackward();
   cout << "Num of element: " << listOne.getNumElems() << endl;
   listOne.getElemAtIndex(4, tempValOne);
   cout << "the 4th element is: " << tempValOne << endl; 
-  listOne.getElemAtIndex(5, tempValOne);
+  listOne.getElemAtIndex(5, tempValTwo);
   cout << "the 5th element is: " << tempValOne << endl; 
   listOne.removeFront(tempValOne);
   listOne.removeLast(tempValOne);
