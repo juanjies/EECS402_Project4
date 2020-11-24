@@ -17,17 +17,17 @@ FIFOQueueClass::~FIFOQueueClass() {
 }
 
 void FIFOQueueClass::enqueue(const int &newItem) {
-  LinkedNodeClass* insertNode = NULL;
+  LinkedNodeClass* insertedNode = NULL;
 
   if (head == NULL) {
     tail = new LinkedNodeClass(NULL, newItem, NULL);
     head = tail;
   }
   else {
-    insertNode = new LinkedNodeClass(tail, newItem, NULL);
-    tail = insertNode;
+    insertedNode = new LinkedNodeClass(tail, newItem, NULL);
+    tail = insertedNode;
     tail -> setBeforeAndAfterPointers();
-    insertNode = NULL;
+    insertedNode = NULL;
   }
 }
 
