@@ -26,7 +26,7 @@ void LIFOStackClass::push(const int &newItem) {
   }
   else {
     head = new LinkedNodeClass(NULL, newItem, temp);
-    head->setBeforeAndAfterPointers();
+    head -> setBeforeAndAfterPointers();
   }
 }
 

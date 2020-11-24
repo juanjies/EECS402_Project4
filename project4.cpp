@@ -46,6 +46,8 @@ int main()
   cout << "Num of element: " << listOne.getNumElems() << endl;
   listOne.getElemAtIndex(4, tempValOne);
   cout << "the 4th element is: " << tempValOne << endl; 
+  listOne.getElemAtIndex(5, tempValOne);
+  cout << "the 5th element is: " << tempValOne << endl; 
   listOne.removeFront(tempValOne);
   listOne.removeLast(tempValOne);
   listOne.insertValue(4);
@@ -58,10 +60,9 @@ int main()
   cout << "List two is: ";
   listTwo.printForward();
   listTwo.printBackward();
-  
 
   // Queue testing part
-  
+
   int outItemQueue = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;
@@ -100,8 +101,7 @@ int main()
   testStack.clear();
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
-
+  
   return 0;
 }
-
 #endif
