@@ -32,15 +32,13 @@ int main()
   listOne.insertValue(1);
   listOne.insertValue(9);
   
-  /*
+  
   // deep copy from listOne to list Two
   SortedListClass listTwo(listOne); 
   int theVal = 0;
-  listTwo.removeFront(theVal);
-  listTwo.removeLast(theVal);
-  listTwo.insertValue(6);
-  listTwo.insertValue(4);
-*/
+  listTwo.insertValue(0);
+  listTwo.insertValue(20);
+
   int theVal = 0;
   cout << "List one is: ";
   listOne.printForward();
@@ -57,9 +55,9 @@ int main()
   listOne.clear();
   listOne.printForward();
 
-//  cout << "List two is: ";
-//  listTwo.printForward();
- 
+  cout << "List two is: ";
+  listTwo.printForward();
+  listTwo.printBackward();
 
 /*
   int outItem = 0;
