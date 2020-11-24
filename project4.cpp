@@ -35,19 +35,18 @@ int main()
   
   // deep copy from listOne to list Two
   SortedListClass listTwo(listOne); 
-  int theVal = 0;
   listTwo.insertValue(0);
   listTwo.insertValue(20);
 
-  int theVal = 0;
+  int tempValOne = 0;
   cout << "List one is: ";
   listOne.printForward();
   listOne.printBackward();
   cout << "Num of element: " << listOne.getNumElems() << endl;
   listOne.getElemAtIndex(4, theVal);
   cout << "the 4th element is: " << theVal << endl; 
-  listOne.removeFront(theVal);
-  listOne.removeLast(theVal);
+  listOne.removeFront(tempValOne);
+  listOne.removeLast(tempValOne);
   listOne.insertValue(4);
   listOne.insertValue(6);
   listOne.printForward();
