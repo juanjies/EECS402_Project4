@@ -141,7 +141,7 @@ void SortedListClass::printBackward() const {
     cout << "  " << temp -> getValue() << endl;
     temp = temp -> getPrev();
   }
-  cout << "End of List Contents" << endl;
+  cout << "End Of List Contents" << endl;
 }
 
 bool SortedListClass::removeFront(int &theVal) {

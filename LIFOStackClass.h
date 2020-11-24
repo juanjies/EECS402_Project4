@@ -3,6 +3,10 @@
 
 #include "LinkedNodeClass.h"
 
+// Programmer: Juan-Jie Sun
+// Date: November 2020
+// Purpose: to implement the "last-in-first-out" stack data structure
+
 class LIFOStackClass {
   private:
     LinkedNodeClass *head; //Points to the first node in a stack, or NULL

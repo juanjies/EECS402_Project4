@@ -1,6 +1,7 @@
 #include <iostream>
 #include "SortedListClass.h"
 #include "FIFOQueueClass.h"
+#include "LIFOStackClass.h"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
+// Sorted list testing part
 /*
   SortedListClass listOne;
   cout << "Sorted List testing: " << endl;
@@ -58,7 +60,9 @@ int main()
   listTwo.printBackward();
 */
 
-  int outItem = 0;
+// Queue testing part
+/*
+  int outItemQueue = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;
 
@@ -69,14 +73,35 @@ int main()
   testQueue.enqueue(8);
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
-  testQueue.dequeue(outItem);
+  testQueue.dequeue(outItemQueue);
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
+*/
 
-  return 0;
+// Stack testing part
+
+int outItemStack = 0;
+FIFOQueueClass testStack;
+cout << "Stack testing: " << endl;
+
+testStack.print();
+testStack.push(8);
+testStack.push(7);
+testStack.push(9);
+testStack.push(5);
+cout << "Number of Elements: " << testStack.getNumElems() << endl;
+testStack.print();
+testStack.pop(outItemStack);
+cout << "Number of Elements: " << testStack.getNumElems() << endl;
+testStack.print();
+testStack.clear();
+cout << "Number of Elements: " << testStack.getNumElems() << endl;
+testStack.print();
+
+return 0;
 }
 
 #endif
