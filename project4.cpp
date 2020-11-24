@@ -44,11 +44,12 @@ int main()
   listOne.printForward();
 //  listOne.printBackward();
 //  cout << "Num of element: " << listOne.getNumElems() << endl;
-  cout << "List two is: ";
-  listTwo.printForward();
+//  cout << "List two is: ";
+//  listTwo.printForward();
 //  listOne.getElemAtIndex(4, theVal);
 //  cout << "the 4th element is: " << theVal << endl;  
 
+/*
   int outItem = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;
@@ -66,7 +67,7 @@ int main()
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   cout << "Finish testing queue!" << endl;
-
+*/
   return 0;
 }
 
