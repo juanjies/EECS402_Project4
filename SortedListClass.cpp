@@ -165,6 +165,7 @@ bool SortedListClass::removeFront(int &theVal) {
     theVal = head -> getValue();
     delete head;
     head = temp;
+    head -> setPreviousPointerToNull();
     return (true);
   }
 }
@@ -180,6 +181,7 @@ bool SortedListClass::removeLast(int &theVal) {
     theVal = tail -> getValue();
     delete tail;
     tail = temp;
+    tail->setNextPointerToNull();
     return (true);
   }
 } 
