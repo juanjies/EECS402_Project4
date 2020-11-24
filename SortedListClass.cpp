@@ -171,7 +171,7 @@ bool SortedListClass::removeLast(int &theVal) {
     theVal = tail -> getValue();
     delete tail;
     tail = temp;
-    tail->setNextPointerToNull();
+    tail -> setNextPointerToNull();
     return (true);
   }
 } 

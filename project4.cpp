@@ -22,8 +22,8 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
-// Sorted list testing part
-/*
+  // Sorted list testing part 
+  
   SortedListClass listOne;
   cout << "Sorted List testing: " << endl;
 
@@ -58,10 +58,10 @@ int main()
   cout << "List two is: ";
   listTwo.printForward();
   listTwo.printBackward();
-*/
+  
 
-// Queue testing part
-/*
+  // Queue testing part
+  
   int outItemQueue = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;
@@ -79,29 +79,29 @@ int main()
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
-*/
+  
 
-// Stack testing part
+  // Stack testing part
 
-int outItemStack = 0;
-LIFOStackClass testStack;
-cout << "Stack testing: " << endl;
+  int outItemStack = 0;
+  LIFOStackClass testStack;
+  cout << "Stack testing: " << endl;
 
-testStack.print();
-testStack.push(8);
-testStack.push(7);
-testStack.push(9);
-testStack.push(5);
-cout << "Number of Elements: " << testStack.getNumElems() << endl;
-testStack.print();
-testStack.pop(outItemStack);
-cout << "Number of Elements: " << testStack.getNumElems() << endl;
-testStack.print();
-testStack.clear();
-cout << "Number of Elements: " << testStack.getNumElems() << endl;
-testStack.print();
+  testStack.print();
+  testStack.push(8);
+  testStack.push(7);
+  testStack.push(9);
+  testStack.push(5);
+  cout << "Number of Elements: " << testStack.getNumElems() << endl;
+  testStack.print();
+  testStack.pop(outItemStack);
+  cout << "Number of Elements: " << testStack.getNumElems() << endl;
+  testStack.print();
+  testStack.clear();
+  cout << "Number of Elements: " << testStack.getNumElems() << endl;
+  testStack.print();
 
-return 0;
+  return 0;
 }
 
 #endif
