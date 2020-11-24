@@ -40,7 +40,7 @@ class SortedListClass {
     //the previously inserted nodes.
     void insertValue(
       const int &valToInsert //The value to insert into the list
-      );
+    );
 
     //Prints the contents of the list from head to tail to the screen.
     //Begins with a line reading "Forward List Contents Follow:", then

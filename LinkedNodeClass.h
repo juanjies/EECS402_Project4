@@ -13,16 +13,16 @@ class LinkedNodeClass {
     // this node in the data structure. Will be
     // NULL if this is the first node.
     int nodeVal; 
-    //The value contained within this node.
+    // The value contained within this node.
     LinkedNodeClass* nextNode; 
-    //Will point to the node that comes after
-    //this node in the data structure. Will be
-    //NULL if this is the last node.
+    // Will point to the node that comes after
+    // this node in the data structure. Will be
+    // NULL if this is the last node.
 
   public:
-    //The ONLY constructor for the linked node class - it takes in the
-    //newly created node's previous pointer, value, and next pointer,
-    //and assigns them.
+    // The ONLY constructor for the linked node class - it takes in the
+    // newly created node's previous pointer, value, and next pointer,
+    // and assigns them.
     LinkedNodeClass(
       LinkedNodeClass* inPrev, //Address of node that comes before this one
       const int &inVal, // Value to be contained in this node

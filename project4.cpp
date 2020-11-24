@@ -38,13 +38,17 @@ int main()
   listTwo.removeFront(theVal);
   listTwo.removeLast(theVal);
   listTwo.insertValue(6);
-  listTwo.insertValue(8);
+  listTwo.insertValue(4);
 
   cout << "List one is: ";
   listOne.printForward();
+  listOne.printBackward();
+  listOne.getNumElems();
   cout << "List two is: ";
   listTwo.printForward();
-  
+  listOne.getElemAtIndex(4, theVal);
+  cout << "the 4th element is: " << theVal << endl;  
+
   int outItem = 0;
   FIFOQueueClass testQueue;
   cout << "Queue testing: " << endl;

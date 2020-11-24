@@ -26,10 +26,10 @@ SortedListClass::SortedListClass(const SortedListClass &rhs) {
     head = NULL;
     tail = NULL;
   }
-
+  // if the list is NOT empty
   else if (rhs.head != NULL && rhs.tail != NULL) {
     for (int i = 0; i < rhs.getNumElems(); i++) {
-      // copy the first node
+      // copy the first node and link the head to it
       if (i == 0) {
         tempTwoNext = new LinkedNodeClass(NULL, 
                                           tempOne -> getValue(), NULL);
@@ -92,7 +92,7 @@ void SortedListClass::insertValue(const int &valToInsert) {
   // the list is NOT empty
   else if (temp != NULL) {
     tempVal = temp -> getValue();
-    // find the right location to insert
+    // find the correct location to insert
     while (valToInsert >= tempVal && temp != tail) {
         temp = temp -> getNext(); 
         tempVal = temp -> getValue();
@@ -114,8 +114,8 @@ void SortedListClass::insertValue(const int &valToInsert) {
     // any others in the middle of the list
     else {
       insertedNode = new LinkedNodeClass(temp -> getPrev(),
-                                    valToInsert,
-                                    temp);
+                                         valToInsert,
+                                         temp);
       insertedNode -> setBeforeAndAfterPointers();
       insertedNode = NULL;
     }
