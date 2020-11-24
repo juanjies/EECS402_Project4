@@ -42,8 +42,8 @@ int main()
 
   cout << "List one is: ";
   listOne.printForward();
-  listOne.printBackward();
-//cout << "Num of element: " << listOne.getNumElems() << endl;
+//  listOne.printBackward();
+//  cout << "Num of element: " << listOne.getNumElems() << endl;
   cout << "List two is: ";
   listTwo.printForward();
 //  listOne.getElemAtIndex(4, theVal);
