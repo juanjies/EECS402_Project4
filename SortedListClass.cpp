@@ -126,32 +126,22 @@ void SortedListClass::printForward() const {
   LinkedNodeClass* temp = head;
   cout << "Forward List Contents Follow:" << endl;
   
-  if (temp == NULL) {
-    cout << "List is Empty" << endl;
+  while (temp != NULL) {
+    cout << "  " << temp -> getValue() << endl;
+    temp = temp -> getNext();
   }
-  else {
-    while (temp != NULL) {
-      cout << "  " << temp -> getValue() << endl;
-      temp = temp -> getNext();
-    }
-    cout << "End of List Contents" << endl;
-  }
+  cout << "End of List Contents" << endl;
 }
 
 void SortedListClass::printBackward() const {
   LinkedNodeClass* temp = tail;
   cout << "Backward List Contents Follow:" << endl;
 
-  if (temp == NULL) {
-    cout << "List is Empty" << endl;
+  while (temp != NULL) {
+    cout << "  " << temp -> getValue() << endl;
+    temp = temp -> getPrev();
   }
-  else {
-    while (temp != NULL) {
-      cout << "  " << temp -> getValue() << endl;
-      temp = temp -> getPrev();
-    }
-    cout << "End of List Contents" << endl;
-  }
+  cout << "End of List Contents" << endl;
 }
 
 bool SortedListClass::removeFront(int &theVal) {

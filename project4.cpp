@@ -21,7 +21,6 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
-  
   SortedListClass listOne;
   cout << "Sorted List testing: " << endl;
 
@@ -31,7 +30,6 @@ int main()
   listOne.insertValue(7);
   listOne.insertValue(1);
   listOne.insertValue(9);
-  
   
   // deep copy from listOne to list Two
   SortedListClass listTwo(listOne); 
