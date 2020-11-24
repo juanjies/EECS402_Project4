@@ -40,3 +40,5 @@ class LIFOStackClass {
     //memory leaks.
     void clear();
 };
+
+#endif
