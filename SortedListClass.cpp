@@ -67,7 +67,7 @@ void SortedListClass::clear() {
     ;
   }
   else {
-    for (int i = 0; i < (this -> getNumElems()); i++) {
+    while (temp != NULL) {
       temp = temp -> getNext();
       delete head;
       head = temp;
@@ -150,7 +150,7 @@ void SortedListClass::printBackward() const {
       cout << "  " << temp -> getValue() << endl;
       temp = temp -> getPrev();
     }
-    cout << "End of List Contents";
+    cout << "End of List Contents" << endl;
   }
 }
 
