@@ -143,36 +143,45 @@ void SortedListClass::printBackward() const {
   }
   cout << "End Of List Contents" << endl;
 }
-
+//RESUBMISSION CODE UPDATE
 bool SortedListClass::removeFront(int &theVal) {
   LinkedNodeClass* temp = head;
 
-  if (head == NULL) {
+  if (temp == NULL) {
     return (false);
   }
   else {
-    temp = temp -> getNext();
     theVal = head -> getValue();
-    delete head;
-    head = temp;
-    head -> setPreviousPointerToNull();
+    head = head -> getNext();
+    delete temp;
+    temp = head;
+    if (temp != NULL) {
+      temp -> setPreviousPointerToNull();
+    }
+    else if (temp == NULL) {
+      tail = temp;
+    }
     return (true);
   }
 }
-
+//RESUBMISSION CODE UPDATE
 bool SortedListClass::removeLast(int &theVal) {
   LinkedNodeClass* temp = tail;
 
-  if (tail == NULL) {
+  if (temp == NULL) {
     return (false);
   }
   else {
-    temp = temp -> getPrev();
     theVal = tail -> getValue();
-    delete tail;
-    tail = temp;
-    tail -> setNextPointerToNull();
-    return (true);
+    tail = tail -> getPrev();
+    delete temp;
+    temp = tail;
+    if (temp != NULL) {
+      temp -> setNextPointerToNull();
+    }
+    else if (temp == NULL) {
+      head = temp;
+    }
   }
 } 
 
