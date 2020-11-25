@@ -32,9 +32,9 @@ int main()
   listOne.insertValue(3);
   listOne.insertValue(5);
   listOne.insertValue(7);
-  listOne.insertValue(1);
-  listOne.insertValue(9);
-  
+  listOne.insertValue(3);
+  listOne.insertValue(7);
+
   // deep copy from listOne to list Two
   SortedListClass listTwo(listOne); 
   listTwo.insertValue(0);
@@ -56,13 +56,32 @@ int main()
   listOne.insertValue(6);
   listOne.printForward();
   listOne.printBackward();
+  listOne.removeFront(tempValOne);
+  listOne.removeFront(tempValOne);
+  listOne.removeLast(tempValOne);
+  listOne.removeLast(tempValOne);
+  //RESUBMISSION CODE UPDATE
+  if (!listOne.removeFront(tempValOne)) {
+    cout << "false: the list is empty!" << endl;
+  }
+  else {
+    cout << "there are something in the list" << endl;
+  }
+  if (!listOne.removeLast(tempValOne)) {
+    cout << "false: the list is empty!" << endl;
+  }
+  else {
+    cout << "there are something in the list" << endl;
+  }
+  listOne.printForward();
+  listOne.printBackward();
   listOne.clear();
   listOne.printForward();
 
   cout << "List two is: ";
   listTwo.printForward();
   listTwo.printBackward();
-
+/*
   // Queue testing part
 
   int outItemQueue = 0;
@@ -79,6 +98,7 @@ int main()
   testQueue.dequeue(outItemQueue);
   testQueue.dequeue(outItemQueue);
   testQueue.dequeue(outItemQueue);
+  //RESUBMISSION CODE UPDATE
   if (!testQueue.dequeue(outItemQueue)) {
     cout << "false: the queue is empty!" << endl;
   }
@@ -114,6 +134,7 @@ int main()
   testStack.pop(outItemStack);
   testStack.pop(outItemStack);
   testStack.pop(outItemStack);
+  //RESUBMISSION CODE UPDATE
   if (!testStack.pop(outItemStack)) {
     cout << "false: the stack is empty" << endl;
   }
@@ -131,7 +152,7 @@ int main()
   testStack.clear();
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
-
+*/
   return 0;
 }
 #endif
