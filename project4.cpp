@@ -82,7 +82,7 @@ int main()
   testQueue.dequeue(outItemQueue);
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
-  if (!testQueue.dequeue(out_of_range)) {
+  if (!testQueue.dequeue(outItemQueue)) {
     cout << "false: the queue is empty!" << endl;
   }
   testQueue.clear();
