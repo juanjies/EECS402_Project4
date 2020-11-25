@@ -22,7 +22,7 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
-
+/*
   // Sorted list testing part 
   
   SortedListClass listOne;
@@ -160,7 +160,7 @@ int main()
   testStack.clear();
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
-
+*/
   return 0;
 }
 #endif
