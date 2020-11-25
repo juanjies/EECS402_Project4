@@ -114,7 +114,7 @@ int main()
   testStack.pop(outItemStack);
   testStack.pop(outItemStack);
   testStack.pop(outItemStack);
-  if (!testStack.pop()) {
+  if (!testStack.pop(outItemStack)) {
     cout << "false: the stack is empty" << endl;
   }
   else {
@@ -122,8 +122,8 @@ int main()
   }
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
-  if (!testStack.pop()) {
-    cout << "false: the stack is empty"
+  if (!testStack.pop(outItemStack)) {
+    cout << "false: the stack is empty" << endl;
   }
   else {
     cout << "there are something in the list" << endl;
