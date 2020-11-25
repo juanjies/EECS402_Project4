@@ -30,16 +30,24 @@ void FIFOQueueClass::enqueue(const int &newItem) {
     insertedNode = NULL;
   }
 }
-
+//RESUBMISSION CODE UPDATE
 bool FIFOQueueClass::dequeue(int &outItem) {
-  if (head == NULL) {
+  LinkedNodeClass* temp = head;
+
+  if (temp == NULL) {
     return (false);
   }
   else {
     outItem = head -> getValue();
     head = head -> getNext();
-    delete (head -> getPrev());
-    head->setPreviousPointerToNull();
+    delete temp;
+    temp = head;
+    if (temp != NULL) {
+      temp -> setPreviousPointerToNull();
+    }
+    else if (temp == NULL) {
+      tail = temp;
+    }
     return (true);
   }
 }
