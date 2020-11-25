@@ -82,7 +82,7 @@ int main()
   listTwo.printForward();
   listTwo.printBackward();
 */
-
+/*
   // Queue testing part
 
   int outItemQueue = 0;
@@ -122,8 +122,8 @@ int main()
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
-  
-/*
+*/
+
   // Stack testing part
 
   int outItemStack = 0;
@@ -155,10 +155,14 @@ int main()
   else {
     cout << "there are something in the list" << endl;
   }
+  testStack.push(8);
+  testStack.push(7);
+  testStack.push(9);
+  testStack.push(5);
   testStack.clear();
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
-*/
+
   return 0;
 }
 #endif
