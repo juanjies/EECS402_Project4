@@ -77,6 +77,8 @@ int main()
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.dequeue(outItemQueue);
+  testQueue.dequeue(outItemQueue);
+  testQueue.dequeue(outItemQueue);
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   testQueue.clear();
