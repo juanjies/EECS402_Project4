@@ -79,11 +79,19 @@ int main()
   testQueue.dequeue(outItemQueue);
   testQueue.dequeue(outItemQueue);
   testQueue.dequeue(outItemQueue);
-  testQueue.dequeue(outItemQueue);
+  if (!testQueue.dequeue(outItemQueue)) {
+    cout << "false: the queue is empty!" << endl;
+  }
+  else {
+    cout << "there are something in the list" << endl;
+  }
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
   if (!testQueue.dequeue(outItemQueue)) {
     cout << "false: the queue is empty!" << endl;
+  }
+  else {
+    cout << "there are something in the list" << endl;
   }
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
@@ -104,8 +112,22 @@ int main()
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
   testStack.pop(outItemStack);
+  testStack.pop(outItemStack);
+  testStack.pop(outItemStack);
+  if (!testStack.pop()) {
+    cout << "false: the stack is empty" << endl;
+  }
+  else {
+    cout << "there are something in the list" << endl;
+  }
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
+  if (!testStack.pop()) {
+    cout << "false: the stack is empty"
+  }
+  else {
+    cout << "there are something in the list" << endl;
+  }
   testStack.clear();
   cout << "Number of Elements: " << testStack.getNumElems() << endl;
   testStack.print();
