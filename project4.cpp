@@ -22,7 +22,7 @@ int main()
   //output, etc., of your main doesn't need to match anything from
   //a sample output, etc.
 
-/*
+
   // Sorted list testing part 
   
   SortedListClass listOne;
@@ -81,8 +81,7 @@ int main()
   cout << "List two is: ";
   listTwo.printForward();
   listTwo.printBackward();
-*/
-/*
+
   // Queue testing part
 
   int outItemQueue = 0;
@@ -122,7 +121,6 @@ int main()
   testQueue.clear();
   cout << "Number of Elements: " << testQueue.getNumElems() << endl;
   testQueue.print();
-*/
 
   // Stack testing part
 

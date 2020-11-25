@@ -182,6 +182,7 @@ bool SortedListClass::removeLast(int &theVal) {
     else if (temp == NULL) {
       head = temp;
     }
+    return (true);
   }
 } 
 
